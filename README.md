@@ -503,3 +503,22 @@ Step-by-Step Guide to Launching a VM (EC2 Instance)
 
 
 # Use of PuTTy in connecting VM
+​1. Connect to your instance using PuTTY
+​To connect, you'll need the Public IPv4 address of your EC2 instance and the .ppk file you created from your private key.
+​In PuTTY, enter the Public IPv4 address of your instance in the Host Name (or IP address) field.
+​Navigate to Connection > SSH > Auth.
+​Click Browse and select your .ppk key file.
+​Click Open. When prompted, enter the username for your instance (e.g., ec2-user for Amazon Linux).
+​2. Install a web server
+​Once you are connected to the instance's command line, you need to install a web server. The following commands are for Amazon Linux 2.
+
+# Commands to follow while creating "hello world" webpage
+1. sudo vm install apache2
+2. cd /var/www/html/
+3. ls
+4. sudo rm index.html
+5. Press Shift 'i'
+6. <html>
+        hello world
+   </html>
+7. Refresh the webpage
