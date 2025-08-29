@@ -163,3 +163,312 @@ print("Max:", max(t1), "Min:", min(t1))
 ---
 
 
+
+
+
+
+
+# Comprehensive Tech Notes
+1. Computing Devices
+
+Mobile, Desktop, Server – Fundamentally similar in core principles:
+
+Hardware – Physical components like CPU, GPU, storage devices, network cards.
+
+Software – Operating systems, applications, and system utilities that control hardware.
+
+Computation – Processing of instructions via processors (CPU, GPU, etc.).
+
+Storage – Persistent memory (HDD, SSD) and volatile memory (RAM).
+
+Network – Communication via wired/wireless connections.
+
+
+
+
+---
+
+2. Processing Units
+
+CPU (Central Processing Unit) – General-purpose processor for logic, arithmetic, and control operations.
+
+GPU (Graphics Processing Unit) – Highly parallel processor for rendering graphics and accelerating AI/ML tasks.
+
+IPU (Intelligence Processing Unit) – Optimized for AI workloads and graph-based computations.
+
+TPU (Tensor Processing Unit) – Google’s custom chip for machine learning.
+
+NPU (Neural Processing Unit) – Accelerates AI/ML inference on devices.
+
+DPU (Data Processing Unit) – Handles data movement, storage, and networking tasks.
+
+QPU (Quantum Processing Unit) – Executes quantum algorithms using qubits.
+
+Smart NIC (Network Interface Card) – Network adapter with its own processor for offloading network tasks.
+
+
+
+---
+
+3. Chip & Architecture
+
+Architecture – Instruction set and design of processors.
+
+x86 – Common in desktops/servers, by Intel & AMD.
+
+8085 – 8-bit microprocessor, used in early computing.
+
+ARM – Energy-efficient architecture, dominant in mobile devices.
+
+RISC-V – Open-source instruction set architecture.
+
+CISC – Complex Instruction Set Computing (fewer instructions, more complex operations).
+
+RISC – Reduced Instruction Set Computing (simpler instructions, faster execution).
+
+
+Major Companies:
+
+Intel, AMD – x86 processors.
+
+TSMC, Samsung – Semiconductor manufacturing.
+
+ASML – Lithography machines for chip production.
+
+IBM – Research & enterprise systems.
+
+Canonical – Maintains Ubuntu Linux.
+
+
+
+
+---
+
+4. Operating Systems
+
+Closed Source – Proprietary software (e.g., Windows by Microsoft).
+
+Open Source – Publicly available source code (e.g., Linux).
+
+Ubuntu – User-friendly Linux distro by Canonical.
+
+Red Hat – Enterprise Linux distribution.
+
+
+
+
+---
+
+5. Networking Basics
+
+LAN – Local Area Network (small area).
+
+MAN – Metropolitan Area Network (city-wide).
+
+WAN – Wide Area Network (global, e.g., Internet).
+
+Intranet – Private network for internal use.
+
+Internet – Global interconnection of networks.
+
+NICs – Network Interface Cards.
+
+ISP – Internet Service Provider.
+
+Packets – Units of data sent over a network.
+
+APIPA – Automatic Private IP Addressing (169.254.x.x when DHCP fails).
+
+
+
+---
+
+6. IP Addressing
+
+IP – Internet Protocol.
+
+Private IP Range (IPv4) –
+
+Class A: 10.0.0.0 – 10.255.255.255
+
+Class B: 172.16.0.0 – 172.31.255.255
+
+Class C: 192.168.0.0 – 192.168.255.255
+
+
+Public IP – Globally routable IP assigned by ISPs.
+
+Localhost – 127.0.0.1 (loopback address).
+
+IPv4 – 32-bit addresses (e.g., 192.168.1.1).
+
+IPv6 – 128-bit addresses (e.g., 2001:db8::1).
+
+
+
+---
+
+7. OSI Model (7 Layers)
+
+1. Physical
+
+
+2. Data Link
+
+
+3. Network
+
+
+4. Transport
+
+
+5. Session
+
+
+6. Presentation
+
+
+7. Application
+
+
+
+
+---
+
+8. Advanced Computing
+
+Quantum Computer – Uses qubits for parallel computation.
+
+SoC (System on Chip) – Combines CPU, GPU, memory, and other components on one chip.
+
+Bare Metal System – OS runs directly on hardware (no virtualization layer).
+
+Cloud Computing – On-demand computing resources via internet.
+
+Private Cloud – Exclusive to one organization.
+
+Public Cloud – Shared over the internet.
+
+
+
+
+---
+
+9. Virtualization & Development
+
+Virtual Machine – Emulates a full computer system.
+
+VirtualBox – Open-source virtualization tool.
+
+Hypervisor:
+
+Type 1 – Runs directly on hardware.
+
+Type 2 – Runs on host OS.
+
+
+User Space – Where applications run.
+
+Kernel Space – Where OS kernel executes.
+
+Frontend Development – User interface (HTML, CSS, JS).
+
+Backend Development – Server-side logic (databases, APIs).
+
+API – Application Programming Interface.
+
+DevOps – Combines software development & IT operations.
+
+
+
+---
+
+10. Networking Tools
+
+DNS – Domain Name System (maps domain to IP).
+
+VPN – Virtual Private Network (secure connection over public networks).
+
+DSL – Digital Subscriber Line (internet over phone lines).
+
+DPDK – Data Plane Development Kit (fast packet processing).
+
+SR-IOV – Single Root I/O Virtualization (sharing PCI devices).
+
+
+
+---
+
+11. Emerging Technologies
+
+Blockchain – Distributed ledger technology.
+
+Cryptocurrency – Digital currency (e.g., Bitcoin).
+
+BRAVE Software – Privacy-focused browser.
+
+Latency – Delay in data transmission.
+
+Throughput – Amount of data transferred per unit time.
+
+
+
+1. CERN – The Birthplace
+
+In 1989–1990, at CERN (the European Organization for Nuclear Research in Switzerland), a scientist named Tim Berners-Lee proposed a system for sharing research documents over the internet.
+This system became the World Wide Web.
+
+
+---
+
+2. The Web – The Big Idea
+
+The World Wide Web is not the same as the internet.
+
+Internet = global network of connected computers.
+
+Web = an information system on top of the internet, using documents linked by hyperlinks.
+
+
+The Web needed two main technologies to work:
+
+
+---
+
+3. HTML – The Language
+
+HTML (HyperText Markup Language) is the document format of the Web.
+
+It describes the structure of a web page (headings, paragraphs, links, images, etc.).
+
+Berners-Lee created the first version of HTML at CERN.
+
+
+
+---
+
+4. HTTP – The Protocol
+
+HTTP (HyperText Transfer Protocol) is the set of rules for how a browser requests a web page from a server, and how the server sends it back.
+
+It’s like the postal system for HTML pages.
+
+Berners-Lee also created the first version of HTTP at CERN.
+
+
+
+---
+
+📌 In short:
+
+CERN: Where Tim Berners-Lee invented the Web.
+
+Web: The system for linking & sharing documents online.
+
+HTML: The format of those documents.
+
+HTTP: The protocol for transferring those documents between browsers and servers.
+
+
+
+---
