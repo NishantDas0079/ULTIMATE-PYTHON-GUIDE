@@ -472,3 +472,34 @@ HTTP: The protocol for transferring those documents between browsers and servers
 
 
 ---
+
+
+
+
+
+# Cloud Computing
+# Creating VM in AWS
+
+Step-by-Step Guide to Launching a VM (EC2 Instance)
+​Sign in to the AWS Management Console: First, you need an AWS account. If you don't have one, you can create one. AWS offers a free tier that allows you to use certain resources for a limited time at no cost.
+​Navigate to the EC2 Dashboard: From the AWS Management Console, find and select the EC2 service. You can use the search bar at the top for a quick search.
+​Launch a New Instance: On the EC2 dashboard, click the "Launch Instance" button. This will start the configuration wizard.
+​Name and Configure Your Instance:
+​Name: Give your instance a descriptive name.
+​Application and OS Images (AMI): Choose an Amazon Machine Image (AMI), which is a template containing the operating system and other software you need. Look for those labeled "Free tier eligible" if you're using a free account.
+​Instance Type: Select the instance type, which determines the VM's hardware (CPU, memory, storage). For free-tier users, the t2.micro or t3.micro instance types are often recommended.
+​Key Pair: A key pair is essential for securely connecting to your instance. You can create a new key pair or use an existing one. Make sure you download and save the private key file (.pem or .ppk) in a secure location, as you won't be able to download it again.
+​Network Settings:
+​Firewall (Security Group): Configure a security group, which acts as a virtual firewall for your instance. You'll set inbound rules to specify what traffic is allowed to reach your VM (e.g., SSH for Linux or RDP for Windows).
+​Configure Storage:
+​Storage: Specify the size of the root volume (the main disk for the OS). The free tier typically includes up to 30 GB of Amazon Elastic Block Store (EBS) storage.
+​Review and Launch:
+​Review all your selections to ensure they meet your requirements.
+​Click "Launch instance" to create your VM. The instance will take a few minutes to boot up and become ready.
+​Connect to Your Instance:
+​Once the instance status is "running," you can connect to it. Select your instance and click the "Connect" button at the top.
+
+
+
+
+# Use of PuTTy in connecting VM
