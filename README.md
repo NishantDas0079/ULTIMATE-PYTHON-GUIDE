@@ -513,12 +513,14 @@ Step-by-Step Guide to Launching a VM (EC2 Instance)
 ​Once you are connected to the instance's command line, you need to install a web server. The following commands are for Amazon Linux 2.
 
 # Commands to follow while creating "hello world" webpage
-1. sudo vm install apache2
+1. sudo apt install apache2
 2. cd /var/www/html/
 3. ls
 4. sudo rm index.html
-5. Press Shift 'i'
-6. <html>
+5. sudo vi index.html
+6. Press Shift 'i'
+7. <html>
         hello world
    </html>
-7. Refresh the webpage
+8. Press ctrl+c and then write :wq
+9. Refresh the webpage
