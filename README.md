@@ -164,7 +164,7 @@ print("Max:", max(t1), "Min:", min(t1))
 
 
 
-# Python Notes
+# PYTHON BASICS
 
 🐍 Python Basics 
 
@@ -366,7 +366,174 @@ finally:
 
 # FUNCTIONS
 
+📘 Python Functions & Variable Scope
 
+🔹 Python Function
+
+Definition: Block of reusable code to perform a specific task.
+
+Syntax:
+
+def function_name(parameters):
+    # body
+    return value
+
+Advantages: Code reuse, modularity, readability.
+
+Types:
+
+Built-in functions (len(), print())
+
+User-defined functions
+
+
+
+
+---
+
+🔹 Call by Value
+
+Concept: Function gets a copy of the variable’s value.
+
+Effect: Changes inside function do not affect original variable.
+
+Python Note:
+
+Immutable objects (int, float, str, tuple) behave like call by value.
+
+
+
+Example:
+
+def modify(x):
+    x = x + 10
+a = 5
+modify(a)
+print(a)  # Output: 5 (unchanged)
+
+
+---
+
+🔹 Call by Reference
+
+Concept: Function gets reference (address) of variable.
+
+Effect: Changes inside function affect original variable.
+
+Python Note:
+
+Mutable objects (list, dict, set) behave like call by reference.
+
+
+
+Example:
+
+def modify(lst):
+    lst.append(10)
+a = [1,2,3]
+modify(a)
+print(a)  # Output: [1, 2, 3, 10]
+
+
+---
+
+🔹 Static Scoping (Lexical Scoping)
+
+Definition: Scope of a variable is determined at compile-time by its lexical (code) structure.
+
+Python follows static scoping.
+
+LEGB Rule: Local → Enclosing → Global → Built-in.
+
+
+Example:
+
+x = 10
+def outer():
+    x = 20
+    def inner():
+        print(x)  # Refers to x=20 (enclosing scope, not global)
+    inner()
+outer()
+
+
+---
+
+🔹 Dynamic Scoping
+
+Definition: Scope of a variable determined by runtime call sequence (not lexical structure).
+
+Python does NOT use dynamic scoping (languages like Lisp can).
+
+
+Example (hypothetical dynamic scoping):
+
+x = 10
+def f():
+    print(x)   # Would look up variable in caller’s scope at runtime
+def g():
+    x = 20
+    f()        # Would print 20 in dynamic scoping, but prints 10 in Python
+g()
+
+
+---
+
+🔹 Global Variable
+
+Defined outside all functions, accessible everywhere.
+
+Use global keyword to modify inside a function.
+
+
+Example:
+
+x = 5
+def func():
+    global x
+    x = 10
+func()
+print(x)  # Output: 10
+
+
+---
+
+🔹 Local Variable
+
+Declared inside function.
+
+Accessible only within that function.
+
+
+Example:
+
+def func():
+    y = 100  # local
+    print(y)
+func()
+# print(y)  # Error: y not defined
+
+
+---
+
+✅ Quick Recap Keywords:
+
+Python Function → reusable block, defined using def.
+
+Call by Value → Immutable (int, str, tuple).
+
+Call by Reference → Mutable (list, dict, set).
+
+Static Scoping → Python default, uses LEGB rule.
+
+Dynamic Scoping → Runtime lookup (not in Python).
+
+Global Variable → Declared outside, use global.
+
+Local Variable → Declared inside, scope limited to function.
+
+
+---
 
 
 
