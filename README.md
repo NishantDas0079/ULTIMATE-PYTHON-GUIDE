@@ -1,4 +1,4 @@
-# ULTIMATE-PYTHON-GUIDE
+# PYTHON PRACTICAL CODES
 All python codes and notes uploaded here. 
 
 
@@ -97,70 +97,6 @@ print(find_indices("banana", "na"))
 ---
 
 Q8. Cubes of Even Integers
-
-lst = [1, 2, 3, 4, 5, 6]
-print([x**3 for x in lst if isinstance(x, int) and x % 2 == 0])
-
-
----
-
-Q9. File Operations
-
-from collections import Counter
-
-with open("file.txt") as f:
-    data = f.read()
-
-print("Characters:", len(data))
-print("Words:", len(data.split()))
-print("Lines:", data.count("\n")+1)
-
-print("Frequency:", dict(Counter(data)))
-print("Words reversed:", " ".join(data.split()[::-1]))
-
-open("File1.txt", "w").writelines(data.splitlines()[1::2])
-open("File2.txt", "w").writelines(data.splitlines()[::2])
-
-
----
-
-Q10. Class Point
-
-class Point:
-    def __init__(self, x, y):
-        self.x, self.y = x, y
-    def __str__(self):
-        return f"({self.x},{self.y})"
-    def dist(self, p):
-        return ((self.x - p.x)**2 + (self.y - p.y)**2)**0.5
-
-p1, p2 = Point(1, 2), Point(4, 6)
-print(p1, p2, "Distance:", p1.dist(p2))
-
-
----
-
-Q11. Dictionary {n: n³}
-
-print({x: x**3 for x in range(1, 6)})
-
-
----
-
-Q12. Tuple Operations
-
-t1 = (1, 2, 5, 7, 9, 2, 4, 6, 8, 10)
-
-print("Half split:", t1[:len(t1)//2], t1[len(t1)//2:])
-print("Even values:", tuple(x for x in t1 if x % 2 == 0))
-
-t2 = (11, 13, 15)
-print("Concatenation:", t1 + t2)
-
-print("Max:", max(t1), "Min:", min(t1))
-
-
----
 
 
 
@@ -310,26 +246,29 @@ IPv6 – 128-bit addresses (e.g., 2001:db8::1).
 
 7. OSI Model (7 Layers)
 
-1. Physical
+1. Application – User interaction (HTTP, FTP, SMTP).
 
 
-2. Data Link
+2. Presentation – Data translation, encryption, compression.
 
 
-3. Network
+3. Session – Manages sessions (start, maintain, end).
 
 
-4. Transport
+4. Transport – Reliable delivery (TCP, UDP).
 
 
-5. Session
+5. Network – Logical addressing, routing (IP).
 
 
-6. Presentation
+6. Data Link – Error detection, framing (Ethernet, MAC).
 
 
-7. Application
+7. Physical – Hardware, cables, signals, bits.
 
+
+
+Purpose: Standardizes network communication.
 
 
 
@@ -473,7 +412,166 @@ HTTP: The protocol for transferring those documents between browsers and servers
 
 ---
 
+Virtual Machines (VMs)
 
+Definition: Software emulation of a physical computer.
+
+Runs on: Hypervisor (VMware, VirtualBox).
+
+Key Features:
+
+Isolation (each VM separate)
+
+Flexibility (multiple OS on same hardware)
+
+Portability (move VMs across systems)
+
+
+Uses: Testing, server virtualization, running legacy software.
+
+
+
+---
+
+🔹 VirtualBox
+
+Type: Open-source hypervisor by Oracle.
+
+Function: Runs multiple guest OS on a single host machine.
+
+Key Points:
+
+Cross-platform (Windows, macOS, Linux, Solaris).
+
+Supports snapshots (restore points).
+
+Example use: Run Linux on Windows without dual boot.
+
+
+
+
+---
+
+
+
+Containers
+
+Definition: Lightweight, isolated environments for applications.
+
+Difference from VM: Share host OS kernel (not full OS).
+
+Popular Tool: Docker, Kubernetes.
+
+Advantages:
+
+Faster startup (no full OS boot).
+
+Portable (same container runs anywhere).
+
+Efficient (less resource usage).
+
+
+Use Case: Microservices deployment, DevOps.
+
+
+
+---
+
+🔹 Digital Signal Processing (DSP)
+
+Definition: Processing signals (audio, video, sensor data) using digital computers.
+
+Operations: Sampling, Filtering, Compression, Fourier Transform.
+
+Applications:
+
+Audio processing (MP3, noise reduction).
+
+Image processing (JPEG, medical imaging).
+
+Communications (modulation, error correction).
+
+
+
+
+Data Structures & Algorithms (DSA)
+
+Data Structure: Way of organizing data.
+
+Types:
+
+Linear (Array, Linked List, Stack, Queue)
+
+Non-linear (Tree, Graph, Hash Table)
+
+
+
+Algorithm: Step-by-step procedure to solve a problem.
+
+Importance: Optimizes memory, time, performance.
+
+
+
+---
+
+🔹 Some Basic Algorithms & Applications
+
+1. Sorting Algorithms:
+
+Bubble Sort → Simple, educational use.
+
+Merge Sort → Efficient O(n log n), used in databases.
+
+Quick Sort → Fast average case, used in system libraries.
+
+Heap Sort → Priority queue applications.
+
+
+
+2. Searching Algorithms:
+
+Linear Search → Small datasets.
+
+Binary Search → Large sorted datasets (O(log n)).
+
+
+3. Graph Algorithms:
+
+Dijkstra’s Algorithm → Shortest path (maps, routing).
+
+Kruskal’s / Prim’s Algorithm → Minimum spanning tree (network design).
+
+BFS & DFS → Pathfinding, AI, web crawling.
+
+
+
+4. Dynamic Programming (DP):
+
+Fibonacci Sequence → Efficient computation.
+
+Knapsack Problem → Resource optimization.
+
+
+
+5. Greedy Algorithms:
+
+Huffman Coding → Data compression.
+
+Activity Selection → Scheduling.
+
+
+
+6. Divide and Conquer:
+
+Merge Sort, Quick Sort → Efficient problem solving.
+
+Binary Search → Fast searching.
+
+
+
+
+
+---
 
 
 
@@ -524,3 +622,8 @@ Step-by-Step Guide to Launching a VM (EC2 Instance)
    </html>
 8. Press ctrl+c and then write :wq
 9. Refresh the webpage
+
+
+# Mapping the server with Domain Name
+
+
