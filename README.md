@@ -1010,9 +1010,140 @@ Binary Search → Fast searching.
 
 
 
+---
+🔹 1. What is System Design?
+
+Definition: Process of defining architecture, components, interfaces, and data flow for building scalable systems.
+
+Goal: Handle scalability, reliability, maintainability, performance.
+
 
 
 ---
+
+🔹 2. Key Concepts
+
+Scalability → Handle growth (horizontal vs vertical).
+
+Reliability → System continues to work under failures.
+
+Availability → % of time system is up (e.g., 99.9%).
+
+Latency → Delay in response.
+
+Throughput → Requests/sec system can handle.
+
+Fault Tolerance → Ability to recover from failures.
+
+
+
+---
+
+🔹 3. System Components
+
+Client → Frontend (browser, mobile).
+
+Server → Backend services.
+
+Database → SQL (structured) vs NoSQL (unstructured, scalable).
+
+Cache → Redis, Memcached (reduce latency).
+
+Load Balancer → Distributes traffic across servers.
+
+Message Queue → Kafka, RabbitMQ (async processing).
+
+CDN (Content Delivery Network) → Speeds up static content delivery.
+
+
+
+---
+
+🔹 4. Design Principles
+
+Modularity → Break into services (Microservices).
+
+Loose Coupling → Services interact but are independent.
+
+High Cohesion → Each module does one job well.
+
+Consistency vs Availability (CAP Theorem):
+
+Consistency → Same data everywhere.
+
+Availability → System responds always.
+
+Partition Tolerance → Works despite network failures.
+
+
+
+
+---
+
+🔹 5. Steps in System Design (Interview/Planning)
+
+1. Clarify requirements → Functional & non-functional.
+
+
+2. Estimate scale → QPS, storage size, peak traffic.
+
+
+3. Choose architecture → Monolith / Microservices.
+
+
+4. Database design → SQL, NoSQL, sharding, replication.
+
+
+5. Caching → Where to reduce latency.
+
+
+6. Load balancing → Single point of entry.
+
+
+7. Data flow diagram → High-level interactions.
+
+
+8. Security → Authentication, Authorization, Encryption.
+
+
+9. Monitoring → Logs, alerts, metrics.
+
+
+
+
+---
+
+🔹 6. Common System Design Examples
+
+URL Shortener (TinyURL) → Hashing + DB + Cache.
+
+Chat App (WhatsApp) → Real-time, message queue, pub-sub.
+
+E-commerce System (Amazon) → Catalog, Cart, Payment, Recommendation.
+
+Video Streaming (YouTube/Netflix) → CDN, Chunking, Distributed Storage.
+
+
+
+---
+
+✅ Quick Recap (Keywords)
+
+Scalability, Reliability, Latency, Throughput, Fault tolerance
+
+Components → Client, Server, DB, Cache, Load Balancer, Queue, CDN
+
+Principles → Modularity, Loose Coupling, CAP Theorem
+
+Steps → Clarify, Estimate, Architecture, DB, Cache, Load balancing, Security, Monitoring
+
+Examples → URL shortener, Chat app, E-commerce, Video streaming
+
+
+---
+
+
+
 
 
 
