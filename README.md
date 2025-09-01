@@ -98,6 +98,76 @@ print(find_indices("banana", "na"))
 
 Q8. Cubes of Even Integers
 
+lst = [1, 2, 3, 4, 5, 6]
+print([x**3 for x in lst if isinstance(x, int) and x % 2 == 0])
+
+
+---
+
+Q9. File Operations
+
+from collections import Counter
+
+with open("file.txt") as f:
+    data = f.read()
+
+print("Characters:", len(data))
+print("Words:", len(data.split()))
+print("Lines:", data.count("\n")+1)
+
+print("Frequency:", dict(Counter(data)))
+print("Words reversed:", " ".join(data.split()[::-1]))
+
+open("File1.txt", "w").writelines(data.splitlines()[1::2])
+open("File2.txt", "w").writelines(data.splitlines()[::2])
+
+
+---
+
+Q10. Class Point
+
+class Point:
+    def __init__(self, x, y):
+        self.x, self.y = x, y
+    def __str__(self):
+        return f"({self.x},{self.y})"
+    def dist(self, p):
+        return ((self.x - p.x)**2 + (self.y - p.y)**2)**0.5
+
+p1, p2 = Point(1, 2), Point(4, 6)
+print(p1, p2, "Distance:", p1.dist(p2))
+
+
+---
+
+Q11. Dictionary {n: n³}
+
+print({x: x**3 for x in range(1, 6)})
+
+
+---
+
+Q12. Tuple Operations
+
+t1 = (1, 2, 5, 7, 9, 2, 4, 6, 8, 10)
+
+print("Half split:", t1[:len(t1)//2], t1[len(t1)//2:])
+print("Even values:", tuple(x for x in t1 if x % 2 == 0))
+
+t2 = (11, 13, 15)
+print("Concatenation:", t1 + t2)
+
+print("Max:", max(t1), "Min:", min(t1))
+
+
+---
+
+
+
+# Python Notes
+
+
+
 
 
 
@@ -601,6 +671,7 @@ Step-by-Step Guide to Launching a VM (EC2 Instance)
 
 
 # Use of PuTTy in connecting VM
+
 ​1. Connect to your instance using PuTTY
 ​To connect, you'll need the Public IPv4 address of your EC2 instance and the .ppk file you created from your private key.
 ​In PuTTY, enter the Public IPv4 address of your instance in the Host Name (or IP address) field.
@@ -625,5 +696,81 @@ Step-by-Step Guide to Launching a VM (EC2 Instance)
 
 
 # Mapping the server with Domain Name
+
+
+🌐 Mapping Domain Name with AWS VM (EC2) – With Elastic IP
+
+🔹 1. Register Domain
+
+Register from Route 53, GoDaddy, Namecheap, etc.
+---
+
+🔹 2. Launch & Configure EC2 (VM)
+
+Start an EC2 instance (Linux/Windows).
+
+Assign an Elastic IP (static public IP → won’t change after reboot).
+
+Go to EC2 → Elastic IPs → Allocate → Associate with EC2 instance.
+
+
+
+
+---
+
+🔹 3. Configure Security Group (Firewall)
+
+Open necessary ports in EC2 Security Group:
+
+80 (HTTP)
+
+443 (HTTPS)
+
+22 (SSH) for Linux OR 3389 (RDP) for Windows (only for admin).
+
+
+
+
+---
+
+🔹 4. Web Server Setup
+
+Install a server (if needed):
+
+Linux: Apache (sudo apt install apache2), Nginx, etc.
+
+Windows: IIS.
+
+
+Test by entering Elastic IP in browser → should load default server page.
+
+
+
+---
+
+🔹 5. Configure DNS (Domain → Elastic IP)
+
+Case A: Using AWS Route 53
+
+1. Go to Route 53 → Hosted Zones → Create Hosted Zone.
+
+
+2. Add a Record Set:
+
+Type: A Record
+
+Name: @ (for root domain) or www (for subdomain).
+
+Value: Elastic IP of EC2.
+
+
+
+3. Copy NS (Name Server) records from Route 53.
+
+
+4. Update domain registrar with these NS records.
+
+
+
 
 
