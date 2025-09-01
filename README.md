@@ -166,6 +166,205 @@ print("Max:", max(t1), "Min:", min(t1))
 
 # Python Notes
 
+🐍 Python Basics 
+
+---
+
+🔹 1. Python Overview
+
+High-level, Interpreted, Object-Oriented
+
+Dynamic typing → no type declaration needed
+
+Extension: .py
+
+
+
+---
+
+🔹 2. Variables & Data Types
+
+Primitive: int, float, str, bool, complex
+
+Collections: list, tuple, set, dict, array, deque
+
+Special: bytes, bytearray, frozenset
+
+
+x = 10        # int
+y = 3.14      # float
+z = "Hello"   # str
+
+
+---
+
+🔹 3. Operators
+
+Arithmetic → + - * / % // **
+
+Comparison → == != > < >= <=
+
+Logical → and or not
+
+Membership → in, not in
+
+Identity → is, is not
+
+
+
+---
+
+🔹 4. Control Flow
+
+if cond: ...
+elif cond: ...
+else: ...
+
+for i in range(n): ...
+while cond: ...
+break, continue, pass
+
+
+---
+
+🔹 5. Functions
+
+def func(a, b=0, *args, **kwargs):
+    return a+b
+
+
+---
+
+🔹 6. Strings
+
+Immutable, ordered
+
+Slicing → s[0:5], s[::-1]
+
+Methods → .upper(), .lower(), .split(), .replace()
+
+
+
+---
+
+🔹 7. Core Data Structures
+
+✅ List
+
+Mutable, ordered, allows duplicates
+
+
+lst = [1, 2, 3]
+lst.append(4)
+
+✅ Tuple
+
+Immutable, ordered, allows duplicates
+
+
+tup = (1, 2, 3)
+
+✅ Set
+
+Mutable, unordered, unique elements
+
+
+s = {1, 2, 3}
+s.add(4)
+
+✅ Dictionary
+
+Key-Value pairs, mutable, ordered (Py 3.7+)
+
+
+d = {"a": 1, "b": 2}
+d["c"] = 3
+
+
+---
+
+🔹 8. Other Python Data Structures
+
+✅ Array (from array module)
+
+Stores homogeneous data (all same type).
+
+
+import array
+arr = array.array('i', [1, 2, 3])
+
+✅ Deque (from collections)
+
+Double-ended queue, fast appends/pops.
+
+
+from collections import deque
+dq = deque([1, 2, 3])
+dq.appendleft(0)
+
+✅ Stack (via list or deque)
+
+LIFO (Last In First Out).
+
+
+stack = []
+stack.append(1)
+stack.pop()
+
+✅ Queue (via deque or queue module)
+
+FIFO (First In First Out).
+
+
+from collections import deque
+q = deque([1,2])
+q.popleft()
+
+✅ Priority Queue (heapq)
+
+Implements min-heap.
+
+
+import heapq
+pq = [3, 1, 4]
+heapq.heapify(pq)
+heapq.heappop(pq)  # smallest
+
+✅ Linked List (manual class implementation)
+
+Not built-in → created using Node class.
+
+
+✅ Graphs / Trees
+
+Implemented using dict (adjacency list) or classes.
+
+
+
+---
+
+🔹 9. File Handling
+
+with open("file.txt","r") as f:
+    data = f.read()
+
+
+---
+
+🔹 10. Exception Handling
+
+try:
+    x = 1/0
+except Exception as e:
+    print(e)
+finally:
+    print("Done")
+
+
+---
+
+
+# FUNCTIONS
 
 
 
