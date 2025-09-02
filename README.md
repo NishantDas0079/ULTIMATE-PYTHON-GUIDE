@@ -167,7 +167,7 @@ print("Max:", max(t1), "Min:", min(t1))
 
 
 
-# PYTHON BASICS
+# PYTHON BASICS (20/08/25 to 1/09/25) 
 
 🐍 Python Basics 
 
@@ -1302,6 +1302,11 @@ Value: Elastic IP of EC2.
 
 
 4. Update domain registrar with these NS records.
+
+
+
+
+# Creating/Adding Containers in AWS VM server
 
 
 
