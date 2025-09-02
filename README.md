@@ -1147,6 +1147,13 @@ Examples → URL shortener, Chat app, E-commerce, Video streaming
 
 
 
+# All about C Programming (3/09/25) 
+
+
+
+
+
+
 # Cloud Computing
 # Creating VM in AWS
 
@@ -1331,6 +1338,7 @@ sudo usermod -aG docker $USER
 
 ✅ Verify: docker --version
 ✅ Test: docker run hello-world
+
 
 
 
