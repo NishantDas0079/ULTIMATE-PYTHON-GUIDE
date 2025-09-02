@@ -1308,6 +1308,89 @@ Value: Elastic IP of EC2.
 
 # Creating/Adding Containers in AWS VM server
 
+1. Pre-requisites
+
+AWS EC2 VM (Ubuntu recommended)
+
+sudo access
+
+Update packages:
+
+sudo apt update && sudo apt upgrade -y
+
+
+
+---
+
+2. Install Docker
+
+sudo apt install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+
+✅ Verify: docker --version
+✅ Test: docker run hello-world
+
+
+
+---
+
+3. Install VirtualBox
+
+sudo apt install -y virtualbox virtualbox-ext-pack
+
+✅ Verify: vboxmanage --version
+
+
+---
+
+4. Install Minikube
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+✅ Verify: minikube version
+
+
+---
+
+5. Start Minikube (with Docker driver inside AWS VM)
+
+minikube start --driver=docker
+
+(If Docker not supported, fallback to VirtualBox)
+
+minikube start --driver=virtualbox
+
+✅ Verify cluster:
+
+kubectl get nodes
+
+
+---
+
+6. Install kubectl (K8s CLI)
+
+sudo snap install kubectl --classic
+
+✅ Verify: kubectl version --client
+
+
+---
+
+7. Quick Flow
+
+Container Runtime → Docker
+
+VM Option → VirtualBox
+
+Cluster Orchestration → Minikube (single-node K8s on AWS VM)
+
+
+
+---
+
 
 
 
