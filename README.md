@@ -43,19 +43,20 @@ while len(primes) < n:
     if isprime(num): primes.append(num)
     num += 1
 print("First n primes:", primes)
-
+```
 
 ---
+```
 
 # Q3. Pyramid and Reverse Pyramid :-
 
 n = int(input("Enter rows: "))
 for i in range(1, n+1): print(" "*(n-i) + "*"*(2*i-1))
 for i in range(n-1, 0, -1): print(" "*(n-i) + "*"*(2*i-1))
-
+```
 
 ---
-
+```
 # Q4. Character Operations :-
 
 ch = input("Enter a character: ")
@@ -67,10 +68,10 @@ elif ch.isdigit():
     print("Digit:", names[int(ch)])
 else:
     print("Special character")
-
+```
 
 ---
-
+```
 # Q5. String Operations :-
 
 s = input("Enter string: ")
@@ -79,35 +80,35 @@ print("Replace a by x:", s.replace('a', 'x'))
 print("Remove first 'a':", s.replace('a', '', 1))
 print("Remove all 'a':", s.replace('a', ''))
 
-
+```
 ---
-
+```
 # Q6. Swap first n characters of two strings :-
 
 s1, s2, n = "hello", "world", 2
 print("After swap:", s2[:n] + s1[n:], s1[:n] + s2[n:])
 
-
+```
 ---
-
+```
 # Q7. Function to return indices of substring :-
 
 def find_indices(s1, s2):
     return [i for i in range(len(s1)) if s1.startswith(s2, i)] or -1
 
 print(find_indices("banana", "na"))
-
+```
 
 ---
-
+```
 # Q8. Cubes of Even Integers :-
 
 lst = [1, 2, 3, 4, 5, 6]
 print([x**3 for x in lst if isinstance(x, int) and x % 2 == 0])
-
+```
 
 ---
-
+```
 # Q9. File Operations :-
 
 from collections import Counter
@@ -124,10 +125,10 @@ print("Words reversed:", " ".join(data.split()[::-1]))
 
 open("File1.txt", "w").writelines(data.splitlines()[1::2])
 open("File2.txt", "w").writelines(data.splitlines()[::2])
-
+```
 
 ---
-
+```
 # Q10. Class Point :-
 
 class Point:
@@ -140,17 +141,17 @@ class Point:
 
 p1, p2 = Point(1, 2), Point(4, 6)
 print(p1, p2, "Distance:", p1.dist(p2))
-
+```
 
 ---
-
+```
 # Q11. Dictionary {n: n³} :-
 
 print({x: x**3 for x in range(1, 6)})
-
+```
 
 ---
-
+```
 # Q12. Tuple Operations :-
 
 t1 = (1, 2, 5, 7, 9, 2, 4, 6, 8, 10)
@@ -162,10 +163,10 @@ t2 = (11, 13, 15)
 print("Concatenation:", t1 + t2)
 
 print("Max:", max(t1), "Min:", min(t1))
-
+```
 
 ---
-
+```
 
 # Q13. Exception Handling :-
 
