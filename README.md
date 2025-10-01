@@ -19,6 +19,7 @@ print("Roots:", root1, root2)
 
 
 ---
+```
 
 # Q2. Prime Numbers :-
 
