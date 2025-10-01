@@ -4,8 +4,10 @@ All python codes and notes uploaded here.
 
 
 ---
+```
 
 # Q1. Roots of a quadratic equation :-
+
 
 import cmath
 a, b, c = map(float, input("Enter a, b, c: ").split())
@@ -13,7 +15,7 @@ d = (b**2) - (4*a*c)
 root1 = (-b + cmath.sqrt(d)) / (2*a)
 root2 = (-b - cmath.sqrt(d)) / (2*a)
 print("Roots:", root1, root2)
-
+```
 
 
 ---
@@ -173,7 +175,7 @@ try:
     print("Hello,", name)
 except ValueError as e:
     print("Error:", e)
-
+```
 
 
 
